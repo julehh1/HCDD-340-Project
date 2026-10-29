@@ -1,56 +1,38 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 75px;
+  padding: 0 100px;
+
+  background: #9da897;
 }
 
 
-body {
-    font-family: Helvetica, Georgia, sans-serif;
+.menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
-h1, h2, h3, h4, h5 {
-    margin: 10px 0 10px 0;
-    line-height: 1.5;
-    font-weight: bold;
+h1 {
+    font-family: Manrope;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
-    gap: 1rem;
-}
 
-header,
-footer {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #96BEE6;
-  color: whitesmoke;
-  text-align: center;
-}
-
-
-header {
-    grid-column: 1 / -1;
-    grid-row: 1;
-}
-
-main {
-    grid-column: 2 / -1;
-    grid-row: 2;
-}
-
-aside {
-    grid-column: 1/2;
-    grid-row: 2;
-}
-
-footer {
-    grid-column: 1 / -1;
-    grid-row: 3;
+#homeChat {
+    background: #9da897;
+    color: #ffffff;
 }
