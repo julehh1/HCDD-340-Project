@@ -1,0 +1,26 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 75px;
+  padding: 0 100px;
+
+  background: #9da897;
+
+
+}
+
+
+h1 {
+    font-family: Manrope;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+}
