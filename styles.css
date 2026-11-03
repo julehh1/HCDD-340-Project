@@ -1,3 +1,5 @@
+
+
 nav {
   position: sticky;
   top: 0;
@@ -11,6 +13,12 @@ nav {
   padding: 0 100px;
 
   background: #9da897;
+}
+
+body {
+  font-family: "DM Sans", Helvetica, Georgia, sans-serif;
+  background: var(--bg);
+  color: var(--green-dark);
 }
 
 
@@ -28,6 +36,23 @@ h1 {
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
+    line-height: 1.5;
+}
+h2 {
+    font-family: Manrope;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+}
+h3 {
+    font-family: Manrope;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+small {
+    font-size: 12px;
+    opacity: .7;
 }
 
 
@@ -35,4 +60,64 @@ h1 {
 #homeChat {
     background: #9da897;
     color: #ffffff;
+}
+
+
+.container {
+  display: grid;
+  gap: var(--gap);
+  padding: 1rem;
+  align-content: start;
+  grid-template-columns: repeat(4, 1fr);
+}
+section, header { scroll-margin-top: 90px; }
+ 
+header { display: flex; justify-content: space-between; align-items: flex-start; }
+
+
+/*MOBILE*/
+#homeHeader     { grid-column: 1 / -1; grid-row: 1; }
+#homeChat       { grid-column: 1 / -1; grid-row: 2; }
+#homePick       { grid-column: 1 / -1; grid-row: 3; }
+#homeExplore    { grid-column: 1 / -1; grid-row: 4; }
+#homeEssentials { grid-column: 1 / -1; grid-row: 5; }
+#homeNotice     { grid-column: 1 / -1; grid-row: 6; }
+
+/*TABLET*/
+@media (min-width: 768px) {
+  nav { padding: 0 50px; }
+ 
+  .container {
+    grid-template-columns: repeat(8, 1fr);
+    padding: 28px 50px 40px;
+  }
+ 
+  #homeHeader     { grid-column: 1 / -1; grid-row: 1; }
+  #homeChat       { grid-column: 1 / -1; grid-row: 2; }
+  #homePick       { grid-column: 1 / 5;  grid-row: 3; }
+  #homeNotice     { grid-column: 5 / -1; grid-row: 3; }
+  #homeExplore    { grid-column: 1 / -1; grid-row: 4; }
+  #homeEssentials { grid-column: 1 / -1; grid-row: 5; }
+}
+ 
+/*DESKTOP*/
+@media (min-width: 1100px) {
+  nav { padding: 0 100px; }
+ 
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 5rem;
+    padding: 28px 100px 40px;
+  }
+ 
+  #homeHeader     { grid-column: 1 / -1; grid-row: 1; }
+ 
+  /* left column */
+  #homeChat       { grid-column: 1 / 8;  grid-row: 2 / 5; }
+  #homeEssentials { grid-column: 1 / 8;  grid-row: 5 / 8; }
+ 
+  /* right column */
+  #homePick       { grid-column: 8 / -1; grid-row: 2 / 4; }
+  #homeExplore    { grid-column: 8 / -1; grid-row: 4 / 6; }
+  #homeNotice     { grid-column: 8 / -1; grid-row: 6 / 8; }
 }
