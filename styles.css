@@ -120,4 +120,5 @@ header { display: flex; justify-content: space-between; align-items: flex-start;
   #homePick       { grid-column: 8 / -1; grid-row: 2 / 4; }
   #homeExplore    { grid-column: 8 / -1; grid-row: 4 / 6; }
   #homeNotice     { grid-column: 8 / -1; grid-row: 6 / 8; }
+
 }
