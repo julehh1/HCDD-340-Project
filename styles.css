@@ -103,7 +103,6 @@ header { display: flex; justify-content: space-between; align-items: flex-start;
 
 /*DESKTOP*/
 @media (min-width: 1100px) {
-
   .container {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
