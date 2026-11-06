@@ -105,7 +105,14 @@ small {
 
 /* --------------------------------------------------------- */
 
-
+.photo {
+    height: 220px;
+    border-radius: 20px;
+    background-image: url("images/dolomites.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16px;
+}
 
 .container {
   display: grid;
@@ -119,6 +126,10 @@ section, header { scroll-margin-top: 90px; }
 header { display: flex; justify-content: space-between; align-items: flex-start; }
 
 
+
+
+
+
 /*MOBILE*/
 #homeHeader     { grid-column: 1 / -1; grid-row: 1; }
 #homeChat       { grid-column: 1 / -1; grid-row: 2; }
@@ -126,6 +137,11 @@ header { display: flex; justify-content: space-between; align-items: flex-start;
 #homeExplore    { grid-column: 1 / -1; grid-row: 4; }
 #homeEssentials { grid-column: 1 / -1; grid-row: 5; }
 #homeNotice     { grid-column: 1 / -1; grid-row: 6; }
+
+
+
+
+
 
 /*TABLET*/
 @media (min-width: 768px) {
