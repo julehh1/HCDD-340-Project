@@ -1,4 +1,12 @@
+section {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+}
 
+header {
+  padding: 0;
+}
 
 nav {
   position: sticky;
