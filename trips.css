@@ -1,3 +1,7 @@
+/*----------------------------------------------------*/
+/* ------------------TRIPS page---------------------- */
+/*----------------------------------------------------*/
+
 .trips-page {
     display: grid;
     gap: 24px;
@@ -6,6 +10,8 @@
 #tripsHeader {
     grid-column: 1 / -1;
 }
+
+/* ------------------TRIP HERO---------------------- */
 
 #tripHero {
     grid-column: 1 / -1;
@@ -62,9 +68,16 @@
     cursor: pointer;
 }
 
+
+/* ------------------ITINERARY---------------------- */
+
 #tripItinerary {
     grid-column: 1 / -1;
 }
+
+
+
+/* ------------------DAY SELECTOR---------------------- */
 
 .days {
     display: flex;
@@ -88,6 +101,10 @@
     color: white;
 }
 
+
+
+/* ------------------ITINERARY CARDS---------------------- */
+
 .itinerary-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -108,8 +125,10 @@
     align-items: center;
 }
 
-@media (max-width: 767px) {
 
+
+/*MOBILE*/
+@media (max-width: 767px) {
     #tripHero {
         min-height: 350px;
     }
@@ -124,20 +143,17 @@
     }
 }
 
+
+
+/*TABLET*/
 @media (min-width: 768px) {
-
-    .container {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    .itinerary-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .container {grid-template-columns: repeat(8, 1fr);}
+    .itinerary-cards {grid-template-columns: repeat(2, 1fr);}
 }
 
-@media (min-width: 1100px) {
 
-    .itinerary-cards {
-        grid-template-columns: repeat(3, 1fr);
-    }
+
+/*DESKTOP*/
+@media (min-width: 1100px) {
+    .itinerary-cards {grid-template-columns: repeat(3, 1fr);}
 }
