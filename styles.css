@@ -65,7 +65,8 @@ nav {
     color: #2f4a42;
 }
 
-.menu {
+
+.menu { /*navbar button group*/
     display: flex;
     gap: 24px;
 
@@ -74,14 +75,16 @@ nav {
     padding: 0;
 }
 
-.menu li {
+
+.menu li { /*navbar item*/
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6px;
 }
 
-.menu a {
+
+.menu a { /*navbar button*/
     width: 50px;
     height: 50px;
 
@@ -93,7 +96,8 @@ nav {
     text-decoration: none;
 }
 
-.menu span {
+
+.menu span { /*navbar label*/
     font-family: "DM Sans", sans-serif;
     font-size: 12px;
     font-weight: 700;
