@@ -1,3 +1,5 @@
+/* ------------------AI CHAT CARD---------------------- */
+
 #homeChat {
     background: #56766D;
     color: #ffffff;
@@ -42,6 +44,9 @@
     margin-bottom: 16px;
 }
 
+
+/* ------------------EXPLORE card---------------------- */
+
 .explore-cards {
     display: flex;
     gap: 12px;
@@ -56,6 +61,9 @@
 
     background: lightgray;
 }
+
+
+/* ------------------TRAVEL ESSENTIALS card---------------------- */
 
 .tiles {
     display: flex;
@@ -89,6 +97,9 @@
     background: #e6e0f2;
 }
 
+
+/* ------------------VIA AI suggestion card---------------------- */
+
 #homeNotice {
     background: #668274;
     color: white;
@@ -105,89 +116,34 @@
     font-weight: bold;
 }
 
-#homeHeader {
-    grid-column: 1 / -1;
-}
 
-#homeChat {
-    grid-column: 1 / -1;
-}
 
-#homePick {
-    grid-column: 1 / -1;
-}
+/*MOBILE*/
 
-#homeExplore {
-    grid-column: 1 / -1;
-}
-
-#homeEssentials {
-    grid-column: 1 / -1;
-}
-
-#homeNotice {
-    grid-column: 1 / -1;
-}
+#homeHeader         {grid-column: 1 / -1;}
+#homeChat           {grid-column: 1 / -1;}
+#homePick           {grid-column: 1 / -1;}
+#homeExplore        {grid-column: 1 / -1;}
+#homeEssentials     {grid-column: 1 / -1;}
+#homeNotice         {grid-column: 1 / -1;}
 
 @media (min-width: 768px) {
+    .container       {grid-template-columns: repeat(8, 1fr);}
 
-    .container {
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    #homeHeader {
-        grid-column: 1 / -1;
-    }
-
-    #homeChat {
-        grid-column: 1 / -1;
-    }
-
-    #homePick {
-        grid-column: 1 / 5;
-    }
-
-    #homeNotice {
-        grid-column: 5 / -1;
-    }
-
-    #homeExplore {
-        grid-column: 1 / -1;
-    }
-
-    #homeEssentials {
-        grid-column: 1 / -1;
-    }
+    #homeHeader      {grid-column: 1 / -1;}
+    #homeChat        {grid-column: 1 / -1;}
+    #homePick        {grid-column: 1 / 5;}
+    #homeNotice      {grid-column: 5 / -1;}
+    #homeExplore     {grid-column: 1 / -1;}
+    #homeEssentials  {grid-column: 1 / -1;}
 }
 
 @media (min-width: 1100px) {
 
-    #homeHeader {
-        grid-column: 1 / -1;
-    }
-
-    #homeChat {
-        grid-column: 1 / 8;
-        grid-row: 2 / 4;
-    }
-
-    #homeEssentials {
-        grid-column: 1 / 8;
-        grid-row: 4 / 6;
-    }
-
-    #homePick {
-        grid-column: 8 / -1;
-        grid-row: 2;
-    }
-
-    #homeExplore {
-        grid-column: 8 / -1;
-        grid-row: 3;
-    }
-
-    #homeNotice {
-        grid-column: 8 / -1;
-        grid-row: 4;
-    }
+    #homeHeader     {grid-column: 1 / -1;}
+    #homeChat       {grid-column: 1 / 8; grid-row: 2 / 4;}
+    #homeEssentials {grid-column: 1 / 8; grid-row: 4 / 6;}
+    #homePick       {grid-column: 8 / -1; grid-row: 2;}
+    #homeExplore    {grid-column: 8 / -1; grid-row: 3;}
+    #homeNotice     {grid-column: 8 / -1; grid-row: 4;}
 }
