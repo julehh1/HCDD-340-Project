@@ -16,18 +16,17 @@
 
 <body>
 
+
 <!--NAVBAR-->
 
     <nav>
         <div class="logo">Via</div>
         
             <ul class="menu">
-
                 <li> <a href="index.html"></a>     <span>Home</span> </li>
                 <li> <a href="trips.html"></a>     <span>Trips</span> </li>
                 <li> <a href="explore.html"></a>   <span>Explore</span> </li>
                 <li> <a href="profile.html"></a>   <span>Profile</span></li>
-
             </ul>
 
         <div class="plus-button">+</div>
@@ -37,51 +36,122 @@
 <div class="container trips-page">
 
     <header id="tripsHeader">
-
         <div>
             <p class="eyebrow">Your Journeys</p>
             <h1>Trips</h1>
             <p>Everything booked, mapped, and ready when you are.</p>
         </div>
-
     </header>
 
 
     <section id="tripHero">
-
         <div class="trip-overlay">
+            <div class="match-badge">Upcoming • 33 days</div>
 
-            <p class="eyebrow light">Italy • Jun 12-19</p>
-
-            <h1>Dolomites,<br>trail by trail</h1>
-
-            <p>7 days • 2 travelers • 8 bookings</p>
-
-            <button class="trip-button">Open Trip</button>
+            <div class="trip-content">
+                <p class="trip-label">VIA'S PICK FOR YOU</p>
+                <h1>Dolomites, trail by trail</h1>
+                <p>7 days • Jun 12-19 • 2 travelers</p>
+                <a href="#tripItinerary" class="trip-button">Explore my plan<span>→</span></a>
+            </div>
 
         </div>
-
     </section>
+
+
 
 
     <section id="tripItinerary">
 
-        <p class="eyebrow">Your Itinerary</p>
-        <h2>Seven days, beautifully paced</h2>
+        <div class="itinerary-header">
+            <div>
+                <p class="itinerary-eyebrow">7 DAYS · YOUR TRIP · DOLOMITES</p>
+                <h2>Your trip itinerary</h2>
+            </div>
+
+            <a href="#" class="share-link">Share</a>
+        </div>
+
+
+        <!-- DAY SELECTOR -->
 
         <div class="days">
             <div class="day active">Day 1</div>
             <div class="day">Day 2</div>
             <div class="day">Day 3</div>
             <div class="day">Day 4</div>
+            <div class="day">Day 5</div>
+            <div class="day">Day 6</div>
+            <div class="day">Day 7</div>
         </div>
 
-        <div class="itinerary-cards">
-            <div class="itinerary-card">Arrive in Ortisei</div>
-            <div class="itinerary-card">Alpine Lodge Check-In</div>
-            <div class="itinerary-card">Dinner at Tubladel</div>
+
+        <!-- DAY 1 ACTIVITIES -->
+
+        <div class="itinerary-list">
+
+            <div class="itinerary-row">
+                <div class="activity-time">Arrival</div>
+
+                <div class="activity-details">
+                    <h3>Arrive in Ortisei</h3>
+                    <p>Explore the village and settle into the Dolomites</p>
+                </div>
+
+                <div class="activity-tag activity">Activity</div>
+            </div>
+
+
+            <div class="itinerary-row">
+                <div class="activity-time">Afternoon</div>
+
+                <div class="activity-details">
+                    <h3>Alpine Lodge Check-In</h3>
+                    <p>Get settled into your mountain accommodation</p>
+                </div>
+
+                <div class="activity-tag stay">Stay</div>
+            </div>
+
+
+            <div class="itinerary-row">
+                <div class="activity-time">Evening</div>
+
+                <div class="activity-details">
+                    <h3>Dinner at Tubladel</h3>
+                    <p>Traditional South Tyrolean food · 1.5 hrs</p>
+                </div>
+
+                <div class="activity-tag restaurant">Restaurant</div>
+            </div>
+
         </div>
+
+
+        <!-- MAP PREVIEW -->
+
+        <div class="itinerary-map">
+
+            <div class="map-pin pin-one"></div>
+            <div class="map-pin pin-two"></div>
+            <div class="map-pin pin-three"></div>
+
+            <div class="map-label">3 stops · Ortisei</div>
+
+        </div>
+
+
+        <!-- VIA SUGGESTION -->
+
+        <div class="via-suggestion">
+            <p class="suggestion-label">VIA · SUGGESTION</p>
+            <h3>Take some time to explore Ortisei before dinner.</h3>
+            <p>Wander through the village and enjoy the mountain views.</p>
+            <a href="#">Add to Day 1 →</a>
+        </div>
+
     </section>
+    
 </div>
 
 </body>

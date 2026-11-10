@@ -38,16 +38,79 @@
     color: white;
 }
 
-.photo {
-    height: 220px;
 
-    border-radius: 20px;
+
+/* ------------------VIA PICK card---------------------- */
+
+#homePick {
+    padding: 0;
+
+    min-height: 450px;
 
     background-image: url("images/dolomites.png");
     background-size: cover;
     background-position: center;
 
-    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.pick-overlay {
+    min-height: 450px;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        to bottom,
+        #0000002c,
+        #000000ce
+    );
+}
+
+.match-badge {
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #000000a2;
+    color: white;
+    font-size: 12px;
+}
+
+.pick-content {
+    color: white;
+}
+
+.pick-label {
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #e5cf8e;
+}
+
+.pick-content h2 {
+    color: white;
+    margin: 8px 0;
+}
+
+.pick-button {
+    margin-top: 24px;
+
+    background: white;
+    color: var(--green-dark);
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    padding: 14px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 

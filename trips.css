@@ -25,47 +25,77 @@
     border-radius: 24px;
 
     overflow: hidden;
+    padding: 0;
 }
 
 .trip-overlay {
     min-height: 500px;
 
-    padding: 40px;
-
-    color: white;
-
-    background: linear-gradient(
-        to right,
-        rgba(0,0,0,.60),
-        rgba(0,0,0,.15)
-    );
+    padding: 24px;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 
-    box-sizing: border-box;
+    background: linear-gradient(
+        to bottom,
+        #0000002c,
+        #000000ce
+    );
+
+    color: white;
 }
+
 
 .trip-overlay h1 {
     color: white;
     margin: 12px 0;
 }
 
+
 .trip-button {
-    width: 160px;
-
-    padding: 14px;
-
-    margin-top: 20px;
-
-    border: none;
-    border-radius: 30px;
+    margin-top: 24px;
 
     background: white;
     color: var(--green-dark);
 
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 14px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 150px;
+}
+
+.trip-content {
+    color: white;
+}
+
+
+.trip-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #e5cf8e;
+}
+
+
+.trip-content h1 {
+    color: white;
+    margin: 8px 0;
+}
+
+
+.match-badge {
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: #000000a2;
+    color: white;
+    font-size: 12px;
 }
 
 
