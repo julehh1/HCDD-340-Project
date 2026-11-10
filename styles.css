@@ -332,12 +332,10 @@ header { display: flex; justify-content: space-between; align-items: flex-start;
     align-content: start;
   }
 
-  #homeHeader {grid-column: 1 / -1; grid-row: 1;}
-
-  #homeChat {grid-column: 1 / 8; grid-row: 2 / 4; min-height: 0;}
-  #homeEssentials {grid-column: 1 / 8; grid-row: 4 / 6;}
-
-  #homePick {grid-column: 8 / -1; grid-row: 2;}
-  #homeExplore {grid-column: 8 / -1; grid-row: 3;}
-  #homeNotice {grid-column: 8 / -1;grid-row: 4;}
+  #homeHeader           {grid-column: 1 / -1; grid-row: 1;}
+  #homeChat             {grid-column: 1 / 8; grid-row: 2 / 4; min-height: 0;}
+  #homeEssentials       {grid-column: 1 / 8; grid-row: 4 / 6;}
+  #homePick             {grid-column: 8 / -1; grid-row: 2;}
+  #homeExplore          {grid-column: 8 / -1; grid-row: 3;}
+  #homeNotice           {grid-column: 8 / -1;grid-row: 4;}
 }
