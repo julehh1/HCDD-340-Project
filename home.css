@@ -134,8 +134,6 @@
 #homeNotice         {grid-column: 1 / -1;}
 
 @media (min-width: 768px) {
-    .container       {grid-template-columns: repeat(8, 1fr);}
-
     #homeHeader      {grid-column: 1 / -1;}
     #homeChat        {grid-column: 1 / -1;}
     #homePick        {grid-column: 1 / 5;}

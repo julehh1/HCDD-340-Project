@@ -181,6 +181,18 @@ small {
     opacity: .7;
 }
 
+
+.container {
+    display: grid;
+    gap: var(--gap);
+    padding: 1rem;
+    align-content: start;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+
 @media (min-width: 768px) {
 
     nav {
@@ -188,18 +200,24 @@ small {
     }
 
     .container {
+        grid-template-columns: repeat(8, 1fr);
         padding: 28px 50px 40px;
     }
 }
 
+
+
 @media (min-width: 1100px) {
 
     .container {
+        display: grid;
         grid-template-columns: repeat(12, minmax(0, 1fr));
 
         column-gap: 24px;
         row-gap: 24px;
 
         padding: 28px 50px 40px;
+
+        align-content: start;
     }
 }

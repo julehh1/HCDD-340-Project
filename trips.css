@@ -147,7 +147,6 @@
 
 /*TABLET*/
 @media (min-width: 768px) {
-    .container {grid-template-columns: repeat(8, 1fr);}
     .itinerary-cards {grid-template-columns: repeat(2, 1fr);}
 }
 
