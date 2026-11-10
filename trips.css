@@ -1,5 +1,6 @@
+
 /*----------------------------------------------------*/
-/* ------------------TRIPS page---------------------- */
+/* ------------------TRIPS PAGE----------------------- */
 /*----------------------------------------------------*/
 
 .trips-page {
@@ -11,11 +12,11 @@
     grid-column: 1 / -1;
 }
 
+
 /* ------------------TRIP HERO---------------------- */
 
 #tripHero {
     grid-column: 1 / -1;
-
     min-height: 500px;
 
     background-image: url("images/dolomites.png");
@@ -23,14 +24,12 @@
     background-position: center;
 
     border-radius: 24px;
-
     overflow: hidden;
     padding: 0;
 }
 
 .trip-overlay {
     min-height: 500px;
-
     padding: 24px;
 
     display: flex;
@@ -46,16 +45,13 @@
     color: white;
 }
 
-
 .trip-overlay h1 {
     color: white;
     margin: 12px 0;
 }
 
-
 .trip-button {
     margin-top: 24px;
-
     background: white;
     color: var(--green-dark);
 
@@ -74,7 +70,6 @@
     color: white;
 }
 
-
 .trip-label {
     font-size: 12px;
     font-weight: 700;
@@ -82,12 +77,10 @@
     color: #e5cf8e;
 }
 
-
 .trip-content h1 {
     color: white;
     margin: 8px 0;
 }
-
 
 .match-badge {
     width: fit-content;
@@ -99,90 +92,274 @@
 }
 
 
-/* ------------------ITINERARY---------------------- */
+/*----------------------------------------------------*/
+/* ------------------ITINERARY------------------------ */
+/*----------------------------------------------------*/
 
 #tripItinerary {
     grid-column: 1 / -1;
+    padding: 32px;
+    border-radius: 24px;
+    background: white;
+    min-width: 0;
 }
 
+
+/* ------------------HEADER---------------------- */
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.itinerary-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    color: #c76a53;
+    margin-bottom: 10px;
+}
+
+.itinerary-header h2 {
+    font-family: Manrope, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.share-link {
+    color: #c76a53;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
 
 
 /* ------------------DAY SELECTOR---------------------- */
 
 .days {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 4px;
 
-    margin-top: 24px;
-    margin-bottom: 24px;
+    padding: 4px;
+    margin-bottom: 16px;
+
+    background: #e5e6e3;
+    border-radius: 16px;
 }
 
 .day {
-    padding: 14px 20px;
+    padding: 13px 8px;
+    border-radius: 12px;
 
-    border-radius: 16px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
 
-    background: #EFEFEF;
+    color: var(--green-dark);
+    background: transparent;
+    cursor: pointer;
 }
 
 .day.active {
-    background: #1d5348;
+    background: var(--green);
     color: white;
 }
 
 
+/* ------------------ACTIVITY ROWS---------------------- */
 
-/* ------------------ITINERARY CARDS---------------------- */
-
-.itinerary-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 16px;
-}
-
-.itinerary-card {
-    padding: 20px;
-
-    background: #f7f3ee;
-
-    border-radius: 18px;
-
-    min-height: 80px;
-
+.itinerary-list {
     display: flex;
+    flex-direction: column;
+}
+
+.itinerary-row {
+    display: grid;
+    grid-template-columns: 75px minmax(0, 1fr) 120px;
+
     align-items: center;
+    gap: 16px;
+
+    min-height: 88px;
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e6e8e5;
+}
+
+.activity-time {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--green);
+}
+
+.activity-details h3 {
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px;
+}
+
+.activity-details p {
+    font-size: 12px;
+    color: #929b95;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+/* ------------------CATEGORY TAGS---------------------- */
+
+.activity-tag {
+    justify-self: center;
+
+    width: 100px;
+    padding: 9px 10px;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.activity {
+    background: #dcefeb;
+    color: #426e63;
+}
+
+.stay {
+    background: #e7e2f5;
+    color: #70628f;
+}
+
+.restaurant {
+    background: #fce5d8;
+    color: #a66b4e;
+}
+
+
+/* ------------------MAP PREVIEW---------------------- */
+
+.itinerary-map {
+    position: relative;
+
+    height: 150px;
+    margin-top: 24px;
+
+    background: #eaede9;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.map-pin {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background: #c45442;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.pin-one {
+    top: 30%;
+    left: 18%;
+}
+
+.pin-two {
+    top: 55%;
+    left: 48%;
+}
+
+.pin-three {
+    top: 25%;
+    left: 77%;
+}
+
+.map-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+
+    padding: 10px 20px;
+
+    background: white;
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ------------------VIA SUGGESTION---------------------- */
+
+.via-suggestion {
+    margin-top: 24px;
+    padding: 24px;
+
+    background: #58796f;
+    color: white;
+
+    border-radius: 22px;
+}
+
+.suggestion-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #d6e3dc;
+    margin: 0 0 10px;
+}
+
+.via-suggestion h3 {
+    font-size: 17px;
+    font-weight: 600;
+    color: white;
+
+    margin: 0 0 10px;
+}
+
+.via-suggestion p {
+    font-size: 13px;
+    color: #e1e9e4;
+    margin-bottom: 16px;
+}
+
+.via-suggestion a {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 
 
-/*MOBILE*/
+
+
+/*----------------------------------------------------*/
+/* ------------------RESPONSIVE----------------------- */
+/*----------------------------------------------------*/
 @media (max-width: 767px) {
-    #tripHero {
-        min-height: 350px;
+    .via-suggestion {
+        padding: 20px;
+        border-radius: 18px;
     }
 
-    .trip-overlay {
-        min-height: 350px;
-        padding: 24px;
+    .via-suggestion h3 {
+        font-size: 18px;
     }
 
-    .itinerary-cards {
-        grid-template-columns: 1fr;
+    .via-suggestion p {
+        font-size: 13px;
+        line-height: 1.5;
     }
-}
 
-
-
-/*TABLET*/
-@media (min-width: 768px) {
-    .itinerary-cards {grid-template-columns: repeat(2, 1fr);}
-}
-
-
-
-/*DESKTOP*/
-@media (min-width: 1100px) {
-    .itinerary-cards {grid-template-columns: repeat(3, 1fr);}
+    .via-suggestion .trip-button {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
 }
