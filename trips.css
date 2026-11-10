@@ -1,0 +1,143 @@
+.trips-page {
+    display: grid;
+    gap: 24px;
+}
+
+#tripsHeader {
+    grid-column: 1 / -1;
+}
+
+#tripHero {
+    grid-column: 1 / -1;
+
+    min-height: 500px;
+
+    background-image: url("images/dolomites.png");
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+}
+
+.trip-overlay {
+    min-height: 500px;
+
+    padding: 40px;
+
+    color: white;
+
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,.60),
+        rgba(0,0,0,.15)
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.trip-overlay h1 {
+    color: white;
+    margin: 12px 0;
+}
+
+.trip-button {
+    width: 160px;
+
+    padding: 14px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: white;
+    color: var(--green-dark);
+
+    cursor: pointer;
+}
+
+#tripItinerary {
+    grid-column: 1 / -1;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.day {
+    padding: 14px 20px;
+
+    border-radius: 16px;
+
+    background: #EFEFEF;
+}
+
+.day.active {
+    background: #1d5348;
+    color: white;
+}
+
+.itinerary-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.itinerary-card {
+    padding: 20px;
+
+    background: #f7f3ee;
+
+    border-radius: 18px;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+
+    #tripHero {
+        min-height: 350px;
+    }
+
+    .trip-overlay {
+        min-height: 350px;
+        padding: 24px;
+    }
+
+    .itinerary-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .itinerary-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1100px) {
+
+    .itinerary-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

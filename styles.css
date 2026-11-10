@@ -1,22 +1,45 @@
 :root {
-  --bg: #EFEFEF;
-  --green-dark: #2f4a42;
-  --green: #5d7b70;
-  --gap: 24px;
+    --bg: #EFEFEF;
+    --green-dark: #2f4a42;
+    --green: #5d7b70;
+    --gap: 24px;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: var(--bg);
+    color: var(--green-dark);
+
+    margin: 0;
 }
 
 section {
-  background: white;
-  border-radius: 24px;
-  padding: 24px;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
 }
 
 header {
-  padding: 0;
+    padding: 0;
 }
 
+.container {
+    display: grid;
+    gap: var(--gap);
+    padding: 1rem;
+    align-content: start;
+}
 
-/*---------------NAVBAR---------------------*/
+section,
+header {
+    scroll-margin-top: 90px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
 nav {
     position: sticky;
@@ -78,14 +101,9 @@ nav {
     color: #728b83;
 }
 
-
 .menu a:hover {
-  background: rgba(158, 212, 158, 0.5);
+    background: rgba(158, 212, 158, 0.5);
 }
-
-
-
-/*---------------FLOATING PLUS BUTTON-----------------*/
 
 .plus-button {
     position: fixed;
@@ -113,17 +131,6 @@ nav {
     z-index: 2000;
 }
 
-
-/*---------------TEXT STYLING-----------------*/
-
-body {
-  font-family: "DM Sans", sans-serif;
-  background-color: var(--bg);
-  color: var(--green-dark);
-
-  margin: 0;
-}
-
 .eyebrow {
     font-family: "DM Sans", sans-serif;
     font-size: 12px;
@@ -137,205 +144,49 @@ body {
     margin-bottom: 8px;
 }
 
-
 h1 {
     font-family: Manrope;
     font-size: 34px;
-    font-style: normal;
     font-weight: 400;
     line-height: 1.5;
 }
+
 h2 {
     font-family: Manrope;
     font-size: 28px;
-    font-style: normal;
     font-weight: 400;
 }
+
 h3 {
     font-family: Manrope;
     font-size: 24px;
-    font-style: normal;
     font-weight: 400;
 }
+
 small {
     font-size: 12px;
     opacity: .7;
 }
 
-
-
-
-
-
-/* ------------------AI CHAT CARD---------------------- */
-
-#homeChat {
-    background: #56766D;
-    color: #ffffff;
-    border-radius: 24px;
-}
-
-
-.message,
-.user-message {
-    background: rgba(255,255,255,.15);
-    padding: 16px;
-    border-radius: 16px;
-    margin-bottom: 16px;
-}
-
-.user-message {
-    background: #f3eee6;
-    color: #333;
-    margin-left: 100px;
-}
-
-#homeChat input {
-    width: 100%;
-    box-sizing: border-box; 
-    padding: 16px;
-    border: none;
-    border-radius: 30px;
-
-    background: #9fb3aa;
-    color: white;
-}
-
-/* --------------------------------------------------------- */
-
-.photo {
-    height: 220px;
-    border-radius: 20px;
-    background-image: url("images/dolomites.png");
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 16px;
-}
-
-.container {
-  display: grid;
-  gap: var(--gap);
-  padding: 1rem;
-  align-content: start;
-  grid-template-columns: repeat(4, 1fr);
-}
-section, header { scroll-margin-top: 90px; }
- 
-header { display: flex; justify-content: space-between; align-items: flex-start; }
-
-
-/* ------------------EXPLORE card---------------------- */
-
-.explore-cards {
-    display: flex;
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.explore-card {
-    flex: 1;
-    height: 120px;
-    border-radius: 16px;
-    background: lightgray;
-}
-
-/* ------------------TRAVEL ESSENTIALS card---------------------- */
-
-.tiles {
-    display: flex;
-    gap: 16px;
-    padding: 0;
-    list-style: none;
-    margin-top: 20px;
-}
-
-.tile {
-    width: 80px;
-    height: 80px;
-    border-radius: 18px;
-    background: #dce6e6;
-}
-
-.cream {
-    background: #efe4cd;
-}
-
-.pink {
-    background: #f4dfda;
-}
-
-.lilac {
-    background: #e6e0f2;
-}
-
-
-
-/* ------------------VIA AI suggestion card---------------------- */
-
-#homeNotice {
-    background: #668274;
-    color: white;
-}
-
-.show-me {
-    display: inline-block;
-    margin-top: 16px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-
-
-
-/*MOBILE*/
-#homeHeader     { grid-column: 1 / -1; grid-row: 1; }
-#homeChat       { grid-column: 1 / -1; grid-row: 2; }
-#homePick       { grid-column: 1 / -1; grid-row: 3; }
-#homeExplore    { grid-column: 1 / -1; grid-row: 4; }
-#homeEssentials { grid-column: 1 / -1; grid-row: 5; }
-#homeNotice     { grid-column: 1 / -1; grid-row: 6; }
-
-
-
-
-
-
-/*TABLET*/
 @media (min-width: 768px) {
-  nav { padding: 16px 50px; }
- 
-  .container {
-    grid-template-columns: repeat(8, 1fr);
-    padding: 28px 50px 40px;
-  }
- 
-  #homeHeader     { grid-column: 1 / -1; grid-row: 1; }
-  #homeChat       { grid-column: 1 / -1; grid-row: 2; }
-  #homePick       { grid-column: 1 / 5;  grid-row: 3; }
-  #homeNotice     { grid-column: 5 / -1; grid-row: 3; }
-  #homeExplore    { grid-column: 1 / -1; grid-row: 4; }
-  #homeEssentials { grid-column: 1 / -1; grid-row: 5; }
+
+    nav {
+        padding: 16px 50px;
+    }
+
+    .container {
+        padding: 28px 50px 40px;
+    }
 }
- 
 
-/*DESKTOP*/
 @media (min-width: 1100px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    
-    column-gap: 24px;
-    row-gap: 24px;
-    padding: 28px 50px 40px;
-    align-content: start;
-  }
 
-  #homeHeader           {grid-column: 1 / -1; grid-row: 1;}
-  #homeChat             {grid-column: 1 / 8; grid-row: 2 / 4; min-height: 0;}
-  #homeEssentials       {grid-column: 1 / 8; grid-row: 4 / 6;}
-  #homePick             {grid-column: 8 / -1; grid-row: 2;}
-  #homeExplore          {grid-column: 8 / -1; grid-row: 3;}
-  #homeNotice           {grid-column: 8 / -1;grid-row: 4;}
+    .container {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+
+        column-gap: 24px;
+        row-gap: 24px;
+
+        padding: 28px 50px 40px;
+    }
 }
