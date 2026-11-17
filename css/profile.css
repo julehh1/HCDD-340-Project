@@ -2,6 +2,15 @@ header {
     grid-column: 1 / -1;
 }
 
+.profile-pic {
+  width: 150px;         
+  height: 150px;
+  border-radius: 50%;   
+  object-fit: cover;   
+  border: 3px solid #333;
+}
+
+
 #profileDetails {
     grid-column: 1 / -1;
 }
