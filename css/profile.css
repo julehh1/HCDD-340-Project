@@ -1,3 +1,13 @@
 header {
     grid-column: 1 / -1;
 }
+
+#profileDetails {
+    grid-column: 1 / -1;
+}
+
+#profileFields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
