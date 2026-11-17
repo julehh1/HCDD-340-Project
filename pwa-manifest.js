@@ -1,6 +1,8 @@
 const nameInput = document.querySelector("#name");
 const cityInput = document.querySelector("#homeCity");
 const styleInput = document.querySelector("#travelStyle");
+const firstNameInput = document.querySelector("#firstName");
+const lastNameInput = document.querySelector("#lastName");
 const title = document.querySelector("#profileTitle");
 const status = document.querySelector("#status");
 const saveBtn = document.querySelector("#saveProfile");
@@ -16,13 +18,14 @@ const updateTitle = (name) => {
 
 const saveProfile = () => {
     const profile = {
-        name: nameInput.value,
+        firstName: firstNameInput.value,
+        lastName: lastNameInput.value,
         homeCity: cityInput.value,
         travelStyle: styleInput.value
     };
 
     localStorage.setItem("profile", JSON.stringify(profile));
-    updateTitle(profile.name);
+    updateTitle(profile.firstName);
     status.textContent = "Profile saved!";
 };
 
@@ -31,16 +34,18 @@ const loadProfile = () => {
 
     if (saved !== null) {
         const profile = JSON.parse(saved);
-        nameInput.value = profile.name;
+        firstNameInput.value = profile.firstName;
+        lastNameInput.value = profile.lastName;
         cityInput.value = profile.homeCity;
         styleInput.value = profile.travelStyle;
-        updateTitle(profile.name);
+        updateTitle(profile.firstName);
     }
 };
 
 const clearProfile = () => {
     localStorage.removeItem("profile");
-    nameInput.value = "";
+    firstNameInput.value = "";
+    lastNameInput.value = "";
     cityInput.value = "";
     styleInput.value = "adventure";
     updateTitle("");
